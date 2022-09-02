@@ -1,0 +1,493 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+  height: 100vh;
+  background-color: rgb(5 180 224);
+  color: white;
+}
+
+.portfolio, .contact-section{
+    width:100vw;
+    
+    background-color: rgb(5 180 224);
+    color:white;
+}
+
+.menu a{
+    color:white;
+    text-decoration: none;
+    padding:10px 20px;
+    
+}
+
+.menu .active{
+    color:brown;
+}
+
+.menu a:hover{
+    background-color: yellow;
+    color:rgb(5 180 224);
+    transition: ease-out .4s;
+}
+
+.toggle-menu, .info-content .social-network{
+    display: none; 
+}
+
+.brand span{
+    color:magenta;
+
+}
+.menu{
+    display:flex;
+    width:50%;
+    justify-content: space-around;
+    
+}
+
+.menu li{
+    list-style: none;
+    
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between ;
+    padding:2em;
+}
+
+.brand{
+    margin-top: -7px;
+}
+
+.main{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    
+   
+    
+}
+
+
+h1{
+    font-size: clamp(4vw, 1.5em, 3em)
+}
+
+span{
+    color:magenta;
+}
+
+.download-cv, .project-details-button{
+    padding: 10px 20px;
+    background-color: magenta;
+    border:none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor:pointer;
+    box-shadow: 10px 3px 11px -5px rgb(0, 0, 0);
+}
+
+.download-cv:hover, .project-details-button:hover{
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.project-details-button a{
+    text-decoration: none;
+}
+
+.main img{
+    width:550px;
+    border: 7px solid magenta;
+    height: 520px;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    align-items: center;
+     
+}
+
+
+.about img{
+    grid-column: 1/5;
+    max-width: 100%;
+}
+
+.about-info{
+    grid-column: 5/10;
+    padding: 3em;
+}
+
+.about-info h2{
+    font-size: 2em;
+    color: rgb(5 180 224);
+}
+
+.divider{
+    height: 4px;
+    width: 60px;
+    background-color: magenta;
+    margin-top: 5px;
+    margin-bottom: 2em;
+
+}
+
+.about p{
+    margin-bottom: 1em;
+}
+
+
+
+.portfolio-headings{
+    width:100vw;
+    padding: 5em;
+}
+
+.portfolio-headings h2{
+    font-size: 2.5em;
+}
+
+.portfolio .container{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    width:300px;
+    height: 350px;
+    color:white;
+    background-color: black;
+    margin: 1em;
+    
+    
+    
+}
+
+.card_img{
+    width: 100%;
+    height: 150px;
+    background-image: url(https://www.itmadrid.com/wp-content/uploads/2020/11/itmadrid-it-project-management.jpg);
+    background-size: cover;
+}
+
+.card_project-icons{
+    margin-top: 320px;
+    margin-left: -100px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: space-evenly;
+    margin-top: 105px;
+    margin-left: 8px;
+    
+
+}
+
+.card_icon-html{
+    color:orangered;
+    text-decoration: none;
+    
+
+}
+
+.card_icon-css{
+    color:#2962ff
+}
+
+.card_project-icons i{
+    font-size: 1.5em;
+}
+
+
+
+.card .project-details{
+    margin: 1em;
+    width: 70%;
+}
+
+.card .project-details a{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+}
+
+.project-details-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.contact-section{
+    padding:3em;
+}
+
+.contact-headings h2{
+    font-size: 3em;
+    
+}
+
+.container-contact{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+   
+    
+}
+
+.contact-section img{
+    width: 750px;
+  height: 700px;
+  bottom: 0px;
+  opacity: 30%;
+    
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+}
+
+.form_input{
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    
+}
+
+.form-group textarea{
+    height: 150px;
+    background: none;
+    padding:1.5em;
+    border: 1px solid white;
+}
+
+.btn-submit{
+    padding:10px 20px;
+    margin:1em;
+    border:none;
+    text-transform: uppercase;
+    background-color: magenta;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 10px 3px 11px -5px rgb(0, 0, 0);
+}
+
+.btn-submit:hover{
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: magenta;
+}
+
+.footer-content h2{
+    font-size: 2em;
+
+}
+.footer-content h5, .social-network{
+    font-size: 1.5em;
+    
+}
+
+.footer_social-network{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.formulario__validacion-estado {
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario__input-error {  /*MENSAJE ERROR EN UN CAMPO (YA SEA EN EL DE NOMBRE O EN EL DE EMAIL)*/
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo{  /*ESTO VA A SER PARA QUE APAREZCA ALGO, EN NUESTRO CASO, SI TE FIJAS EN EL JS, HACE APARECER EL MENSAJE DE ERROR (O SEA, EL formulario__input-error) */
+    display: block;
+}
+
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+
+/*---------------------- MEDIAQUERIES --------------------------------- */
+
+@media screen and (max-width:800px){
+
+    .menu{
+        flex-direction:column;
+        justify-content:center;
+        position:absolute;
+        top:0;
+        left:0;
+        height:100vh;
+        background-color: rgb(43, 125, 180);
+        z-index:1;
+        transform: translateX(-110%);
+        transition:all .5s ease-in-out;
+    }
+    
+    .show-menu{
+        transform: translateX(0%);
+        transition:all .5s ease-in-out;
+
+    }
+    .menu li{
+        margin: 2em;
+    }
+
+    .toggle-menu{
+        display:block;
+    }
+
+    .fa-bars{
+        font-size: 1.5em;
+        margin-top: -.2em;
+        color:yellow;
+        
+    }
+
+    .toggle-menu .fa-close{
+        font-size: 1.7em;
+        display:none;
+        color:yellow;
+    }
+
+    .main, .about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .main img{
+         width: min(70%, 350px);
+         height:auto;
+         width: 450px;
+         height: 520px;
+         min-height: 300px;
+         min-width: 250px;
+         
+    }
+    .social-network{
+        display: flex;
+        justify-content: space-evenly;
+        width: 300px;
+        margin-top: 1em;
+    }
+
+    .info-content{
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .info-content_subtitle{
+        margin-bottom: .5em;
+    }
+    
+    .info-content .social-network{
+        display:block;
+        display:flex;
+        justify-content:space-evenly;
+        
+    }
+
+    .download-cv, .info-content_p, .contact-section__img{
+        display:none;
+    }
+
+    .form-group{
+        width: 80vw;
+    }
+    
+    .about img{
+        display: none;
+    }
+
+    .about{
+        height: 500px;
+    }
+
+    .about-info{
+        margin-bottom: 100px;
+    }
+
+    .portfolio .container{
+        justify-content: center;
+    }
+
+    
+    
+
+}
+
+/*-------------- ESTADOS PARA VALIDADCION -------------------*/
+
+.form-group-incorrecto .form_input{
+    border: 3px solid red;
+    
+}
+
+.form-group-incorrecto .formulario__validacion-estado{
+    color:red;
+    opacity: 1;
+}
+
+.form-group-correcto .formulario__validacion-estado{
+    color: rgb(21, 179, 15);
+    opacity: 1;
+}
+

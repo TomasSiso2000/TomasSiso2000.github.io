@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Tomás</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="brand">
+                    <h2> T<span>S</S></span></h2>
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#portfolio">Portafolio</a></li>
+                    <li><a href="#contact-section">Contacto</a></li>
+                </ul>
+                <div class="toggle-menu">
+                    <i class="fa-solid fa-bars" id="toggle_open"></i>
+                    <i class="fa-solid fa-close" id="toggle_close"></i>
+                </div>
+            </nav>
+        </header>
+
+
+        <main class="main">
+            <div class="info-content">
+                <span class="info-content_subtitle">Frontend Developer</span>
+                <h1> Hola, soy Tomás <span>Siso</span></h1>
+                <div class="social-network">
+        <a href="https://wa.me/541164726610" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tom%C3%A1s-siso-091146241/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+    </div>
+                <p class="info-content_p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, impedit? Possimus repellendus, corporis molestias accusamus dolor eum debitis est voluptatibus aut maxime commodi exercitationem nisi enim ea non, itaque inventore?</p>
+                <a download href="#">
+                    <button class="download-cv">Descargar mi CV</button>
+                </a>
+        
+        
+            </div>
+            <img src="yo.png" alt="foto de Tomás Siso">
+        
+        </main>
+    </div>
+
+<div class="about" id="about">
+    <img src="https://w7.pngwing.com/pngs/115/901/png-transparent-question-mark-graphy-small-plastic-people-people-plastic-bottle-cartoon.png" alt="monigote junto a un signo de interrogación">
+
+    <div class="about-info">
+        <h2>Sobre mí</h2>
+        <div class="divider"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa autem quis possimus nesciunt modi nulla dolore ut illo dolores maxime? Vel itaque nulla quos adipisci laborum nesciunt cupiditate corrupti aut.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt sed ipsum corporis expedita beatae? Sint dolorem velit aliquam totam cupiditate laborum soluta quaerat, error vel dolores, quam, est provident doloribus!</p>
+         <button class="download-cv">Leé mas</button>
+    </div>
+</div>
+<div class="portfolio" id="portfolio">
+    <div class="portfolio-headings">
+        <h2>Mi Portafolio</h2>
+        <div class="divider"></div>
+
+    </div>
+
+    <div class="container">
+        <a href="#" class="card">
+            <div class="card_img"></div>
+        
+            <div class="card_title">
+                <h2>Descripcion del proyecto</h2>
+            </div>
+            <div class="card_project-icons">
+                    <div class="card_icon-html">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div class="card_icon-css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+            </div>
+        <div class="project-details-content">
+            
+
+
+
+        </div>
+        
+        </a>
+
+        <a href="#" class="card">
+            <div class="card_img"></div>
+        
+            <div class="card_title">
+                <h2>Descripcion del proyecto</h2>
+            </div>
+            <div class="card_project-icons">
+                <div class="card_icon-html">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div class="card_icon-css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+        </div>
+        <div class="project-details-content">
+            
+
+
+            
+        </div>
+        
+        </a>
+
+    </div>
+  
+</div>
+
+<div class="contact-section" id="contact-section">
+    <div class="contact-heading">
+      <h2>Contacto</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="container-contact">
+      <img class="contact-section__img" src="yo.png" alt="">
+      <div class="contact-form">
+        <h4>Mandame un mensaje...</h4>
+        <form class="form-group" id="form-group" action="https://formsubmit.co/tsiso@uade.edu.ar" method="POST">
+          <div id="grupo_name">     <!----- GRUPO NOMBRE------->
+            <input type="text" placeholder="Nombre" id="name" name="name" class="form_input" title="Por favor, ingrese su nombre" required> <!-- ?????????????? POR QUÉ NO APARECE ESTE MENSAJE AL NO COMPLETAR CAMPO?-->
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>      <!-- FIJATE QUE SOLO PUSE EL ICONO DE LA CRUZ, PARA DESPUES EN JS REMOVER ESTE SOLO, Y EL CHECK AGREGARLO DESPUES (QUE NO LO PUSE EN EL HTML)-->
+            <p class="formulario__input-error">El nombre no puede contener símbolos</p>
+          </div> 
+          <div id="grupo_email">   <!----- GRUPO EMAIL------->
+            <input type="email" placeholder="Email" id="email" name="email" class="form_input" title="Por favor, ingrese su Email" required> <!-- ?????????????? POR QUÉ NO APARECE ESTE MENSAJE AL NO COMPLETAR CAMPO?-->
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>      <!-- FIJATE QUE SOLO PUSE EL ICONO DE LA CRUZ, PARA DESPUES EN JS REMOVER ESTE SOLO, Y EL CHECK AGREGARLO DESPUES (QUE NO LO PUSE EN EL HTML)-->
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+
+          </div>
+          <textarea name="message" id="message" placeholder="Escriba su mensaje acá" title="Mensaje vacío" required></textarea>
+          <button type="submit" id="button" class="btn-submit">Enviar mensaje</button>
+
+          <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+          </div>
+        </form>
+
+
+        <!------- ESTOS 2 SCRIPT ME VAN A TRAER LA LIBRERIA DE EMAILJS (QUE ES PARA QUE SE MANDE EL TEMPLATE AL EMAIL, CON TODOS LOS DATOS)----->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+
+            <script type="text/javascript"> emailjs.init('vMCVStcEgP6AZnmtz') </script>
+
+
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Tomás Siso</h2>
+        <h5>Frontend Developer</h5>
+        <div class="footer_social-network">
+        <a href="https://wa.me/541164726610" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tom%C3%A1s-siso-091146241/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        </div>
+    </div>
+    
+
+
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+
+
+</html>
