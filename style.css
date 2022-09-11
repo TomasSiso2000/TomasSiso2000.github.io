@@ -105,10 +105,48 @@ span{
     text-decoration: none;
 }
 
-.main img{
+.info-content{
+    z-index: 100;
+}
+
+.info-content_subtitle{
+    margin:100px;
+    margin-left:0px;
+}
+
+#main_img-yo{
+    margin-bottom: 100px;
+    position: relative;
     width:550px;
     border: 7px solid magenta;
     height: 520px;
+}
+
+#main_img-informatica{
+    position:absolute;
+    top:80px;
+    height: 545px;
+    width: 100vw;
+    left:0px;
+    z-index: 0;
+    
+}
+
+#container{
+    position: absolute;
+    left:0px;
+    top:80px;
+    width: 100vw;
+    height: 545px;
+    
+    z-index: 0;
+    
+}
+
+.filter{  /* FILTRO DE IMAGEN EFECTO BORROSO */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(243,243,243,0.2);
 }
 
 .about{
@@ -175,15 +213,37 @@ span{
     background-color: black;
     margin: 1em;
     
-    
-    
+}
+
+.card:hover{
+    background-color: rgba(10, 10, 10, 0.658);
+}
+
+#card_title1{
+    margin-left: 20px;
+}
+
+#card_title2{
+    margin-left: 5px;
 }
 
 .card_img{
-    width: 100%;
-    height: 150px;
-    background-image: url(https://www.itmadrid.com/wp-content/uploads/2020/11/itmadrid-it-project-management.jpg);
+    width: min(70%, 250px);
+    min-height: 210px;
+    min-width: 270px;
     background-size: cover;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#card_img1{
+    background-image: url(https://cdn.pixabay.com/photo/2021/06/06/11/23/superman-logo-6315068__480.png);
+
+}
+
+#card_img2{
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef02abe3-63cc-4dfa-8eab-5543cf3bcf4f/dd57j2a-5bc0d4f3-9c0f-480e-9943-eab7a6ba5203.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VmMDJhYmUzLTYzY2MtNGRmYS04ZWFiLTU1NDNjZjNiY2Y0ZlwvZGQ1N2oyYS01YmMwZDRmMy05YzBmLTQ4MGUtOTk0My1lYWI3YTZiYTUyMDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oiMoqjF5sUW6N649pm_WbxmpMUa3W2xE7f9CzvqMqao);
+
 }
 
 .card_project-icons{
@@ -193,7 +253,7 @@ span{
     position: relative;
     z-index: 1;
     justify-content: space-evenly;
-    margin-top: 105px;
+    margin-top: 80px;
     margin-left: 8px;
     
 
@@ -208,6 +268,10 @@ span{
 
 .card_icon-css{
     color:#2962ff
+}
+
+.card_icon-js{
+    color: yellow;
 }
 
 .card_project-icons i{
@@ -253,7 +317,7 @@ span{
 }
 
 .contact-section img{
-    width: 750px;
+    width: 500px;
   height: 700px;
   bottom: 0px;
   opacity: 30%;
@@ -365,6 +429,7 @@ span{
 /*---------------------- MEDIAQUERIES --------------------------------- */
 
 @media screen and (max-width:800px){
+    
 
     .menu{
         flex-direction:column;
@@ -382,6 +447,7 @@ span{
     .show-menu{
         transform: translateX(0%);
         transition:all .5s ease-in-out;
+        z-index: 300;
 
     }
     .menu li{
@@ -390,6 +456,8 @@ span{
 
     .toggle-menu{
         display:block;
+        
+        
     }
 
     .fa-bars{
@@ -411,14 +479,26 @@ span{
     }
 
 
-    .main img{
+    #main_img-yo{
+         
          width: min(70%, 350px);
          height:auto;
-         width: 350px;
-         height: 520px;
          min-height: 300px;
          min-width: 250px;
+         z-index: 100;
          
+    }
+
+    #main_img-informatica{
+        width: 100vw;
+        height: 544px;
+
+    }
+
+
+    #container{
+        width:100vw;
+        height: 544px;
     }
     .social-network{
         display: flex;
@@ -428,15 +508,27 @@ span{
     }
 
     .info-content{
+        margin-bottom: -2vw;
+        position:absolute;
         display:flex;
         justify-content:center;
         flex-direction:column;
         align-items:center;
     }
 
+
     .info-content_subtitle{
-        margin-bottom: .5em;
+        
+        margin-bottom: -.7em;
+        margin-right: 0px;
+        
     }
+
+    h1{
+        margin-bottom: -.5em;
+        margin-top: 22px;
+    }
+
     
     .info-content .social-network{
         display:block;
@@ -469,10 +561,52 @@ span{
         justify-content: center;
     }
 
-    
-    
+    .card_img{
+        
+        width: 100%;
+        height: 100%;
+        max-width: 150px;
+        max-height:150px;
+        margin-left: 20px;
+        
+    }
+  
 
 }
+
+@media screen and (max-width:497px) {  /*TODAS ESTAS COSAS QUE ESTILICÉ ABAJO, EN EL CELULAR APARECIAN DESORDENADAS*/
+    
+    #main_img-yo{
+        top:-20vw;
+        width:350px;
+        height: 450px;
+    }
+
+    .info-content{
+        margin-bottom: 15vw;
+    }
+    
+    #main_img-informatica{
+        height: 756px;
+    }
+
+    #container{
+        height: 756px;
+    }
+
+    .card_project-icons{
+        margin-top:12vw;
+    }
+
+    
+}
+
+
+
+
+
+
+
 
 /*-------------- ESTADOS PARA VALIDADCION -------------------*/
 
@@ -490,4 +624,5 @@ span{
     color: rgb(21, 179, 15);
     opacity: 1;
 }
+
 
