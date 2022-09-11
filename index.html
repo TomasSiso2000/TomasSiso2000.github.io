@@ -30,6 +30,8 @@
 
 
         <main class="main">
+            <img id="main_img-informatica" src="https://concepto.de/wp-content/uploads/2015/08/informatica-1-e1590711788135.jpg">
+            <div id="container" class="filter"></div> 
             <div class="info-content">
                 <span class="info-content_subtitle">Frontend Developer</span>
                 <h1> Hola, soy Tomás <span>Siso</span></h1>
@@ -43,13 +45,13 @@
 
     </div>
                 <p class="info-content_p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, impedit? Possimus repellendus, corporis molestias accusamus dolor eum debitis est voluptatibus aut maxime commodi exercitationem nisi enim ea non, itaque inventore?</p>
-                <a download href="#">
+                <a download href="cv/TOMAS_SISO.pdf.pdf" target="_blank">
                     <button class="download-cv">Descargar mi CV</button>
                 </a>
         
         
             </div>
-            <img src="yo.png" alt="foto de Tomás Siso">
+            <img id="main_img-yo" src="yo.png" alt="foto de Tomás Siso">
         
         </main>
     </div>
@@ -73,11 +75,11 @@
     </div>
 
     <div class="container">
-        <a href="#" class="card">
-            <div class="card_img"></div>
+        <a href="projects/ANIMACION/index.html" class="card">
+            <div id="card_img1"class="card_img"></div>
         
-            <div class="card_title">
-                <h2>Descripcion del proyecto</h2>
+            <div id="card_title1" class="card_title">
+                <h2>Animación de Superman</h2>
             </div>
             <div class="card_project-icons">
                     <div class="card_icon-html">
@@ -86,6 +88,7 @@
                     <div class="card_icon-css">
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
+                    
             </div>
         <div class="project-details-content">
             
@@ -96,11 +99,11 @@
         
         </a>
 
-        <a href="#" class="card">
-            <div class="card_img"></div>
+        <a href="projects/SPRITE/index.html" class="card">
+            <div id="card_img2" class="card_img"></div>
         
-            <div class="card_title">
-                <h2>Descripcion del proyecto</h2>
+            <div id="card_title2"class="card_title">
+                <h2>Animación de Los Simpsons</h2>
             </div>
             <div class="card_project-icons">
                 <div class="card_icon-html">
@@ -108,6 +111,9 @@
                 </div>
                 <div class="card_icon-css">
                     <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <div class="card_icon-js">
+                    <i class="fa-brands fa-js"></i>
                 </div>
         </div>
         <div class="project-details-content">
@@ -144,7 +150,7 @@
             <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
 
           </div>
-          <textarea name="message" id="message" placeholder="Escriba su mensaje acá" title="Mensaje vacío" required></textarea>
+          <textarea name="message" id="message" placeholder="Escriba su mensaje acá" title="Mensaje vacío"></textarea>
           <button type="submit" id="button" class="btn-submit">Enviar mensaje</button>
 
           <div class="formulario__mensaje" id="formulario__mensaje">
