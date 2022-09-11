@@ -77,14 +77,10 @@ inputs.forEach((input) => {       /* PARA CADA INPUT..... */
 formulario.addEventListener("submit", (e) => {    /* ESTO ESTÁ PREVINIENDO QUE SE ENVÍE EL FORMULARIO SI HAY ERRORES */
     
 
-    if(campos.name && campos.email){
-    /*  e.preventDefault();                LO COMENTO PARA QUE SE MANDE MENSAJE, ARREGLAR    ??????????????*/ 
-        $(formulario).unbind("submit");
+    if(campos.name==false || campos.email==false){ /* EN CASO DE QUE EL CAMPO DE NOMBRE O EMAIL ESTE VACIO, SE DETIENE EL COMPORTAMIENTO (O SEA, NO SE ENVIA MENSAJE) */
+        e.preventDefault();    /* CUANDO ENVIO MENSAJE, OCURRE UN TIMEOUT Y NO SE MANDA ??????????? */
+       
 
     }
-    else {
-
-        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-
-    }
+    
 });
