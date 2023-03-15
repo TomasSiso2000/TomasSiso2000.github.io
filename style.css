@@ -76,7 +76,9 @@
    
     
 }
-
+.info-content_p{
+	color: white;
+}
 
 h1{
     font-size: clamp(4vw, 1.5em, 3em)
