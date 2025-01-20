@@ -8,9 +8,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <!-- Fondo difuso -->
-    <div class="background-container"></div>
-
     <!-- Menu -->
     <nav id="menu" class="menu">
         <button id="toggle_open" class="toggle-btn"><i class="fas fa-bars"></i></button>
@@ -20,7 +17,10 @@
 
     <!-- Sección principal -->
     <main class="main">
-        <img src="yo.png" alt="Imagen Principal" id="main_img-informatica">
+        <!-- Imagen principal -->
+        <img src="img/your-image.jpg" alt="Imagen Principal" id="main_img-informatica">
+
+        <!-- Contenido principal -->
         <div class="main-content">
             <h1>Bienvenidos a mi página</h1>
             <p>Texto de bienvenida y descripción aquí.</p>
@@ -44,4 +44,21 @@
     <!-- Sección de contacto -->
     <section class="contact-section">
         <h2>Contacto</h2>
-        <form i
+        <form id="form-group" class="contact-form">
+            <div class="form-group" id="grupo_name">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+                <div class="formulario__input-error">Nombre inválido</div>
+            </div>
+            <div class="form-group" id="grupo_email">
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email" id="email">
+                <div class="formulario__input-error">Email inválido</div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
