@@ -1,8 +1,6 @@
-
-
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -12,137 +10,94 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.wrapper{
+.wrapper {
     width: 100vw;
     height: 100vh;
     background-color: #1e1e1e;
     color: #ffffff;
 }
 
-.portfolio, .contact-section{
-    width:100vw;
+.portfolio, .contact-section {
+    width: 100%;
     background-color: #1e1e1e;
-    color:white;
+    color: white;
 }
 
-.menu a{
-    color:#ffffff;
-    text-decoration: none;
-    padding:10px 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-.menu .active{
-    color:#ff9800;
-}
-
-.menu a:hover{
-    background-color: #ff9800;
-    color:#121212;
-}
-
-.toggle-menu, .info-content .social-network{
-    display: none; 
-}
-
-.brand span{
-    color:#ff9800;
-}
-
-.menu{
-    display:flex;
-    width:50%;
-    justify-content: space-around;
-}
-
-.menu li{
+.menu {
+    display: flex;
+    justify-content: center; /* Cambié esto para centrar el menú */
+    width: 50%;
     list-style: none;
 }
 
-.navbar{
-    display:flex;
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu .active {
+    color: #ff9800;
+}
+
+.menu a:hover {
+    background-color: #ff9800;
+    color: #121212;
+}
+
+.toggle-menu, .info-content .social-network {
+    display: none;
+}
+
+.brand span {
+    color: #ff9800;
+}
+
+.navbar {
+    display: flex;
     justify-content: space-between;
-    padding:2em;
+    align-items: center;
+    padding: 1em;
 }
 
-.brand{
-    margin-top: -7px;
+.brand h2 {
+    font-size: 2em; /* Ajusté el tamaño de la fuente */
 }
 
-.main{
-    margin: 0 auto;
-    width: 80vw;
-    height: 80vh;
+.main {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    height: 80vh;
+    margin: 0 auto;
     align-items: center;
 }
 
-h1{
+h1 {
     font-size: clamp(4vw, 1.5em, 3em);
     color: #ff9800;
 }
 
-span{
-    color:#ff9800;
+span {
+    color: #ff9800;
 }
 
-.download-cv, .project-details-button{
+.download-cv, .project-details-button {
     padding: 10px 20px;
     background-color: #ff9800;
-    border:none;
+    border: none;
     border-radius: 20px;
     margin-top: 10px;
-    cursor:pointer;
+    cursor: pointer;
     box-shadow: 0px 3px 11px -5px rgba(255, 152, 0, 0.7);
     transition: all 0.3s ease-in-out;
 }
 
-.download-cv:hover, .project-details-button:hover{
+.download-cv:hover, .project-details-button:hover {
     background-color: #ff5722;
     box-shadow: none;
 }
 
-.card{
-    width:300px;
-    height: 350px;
-    color:white;
-    background-color: #333;
-    margin: 1em;
-    transition: all 0.3s ease-in-out;
-}
-
-.card:hover{
-    background-color: rgba(255, 152, 0, 0.8);
-}
-
-.contact-section{
-    padding:3em;
-}
-
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 200px;
-    background-color: #ff9800;
-}
-
-.footer-content h2{
-    font-size: 2em;
-}
-
-.footer-content h5, .social-network{
-    font-size: 1.5em;
-}
-
-.footer_social-network{
-    display: flex;
-    justify-content:space-around;
-    margin-top: 1em;
-    font-size: 1.5em;
-}
-
-
+.card {
+    width: 300px
