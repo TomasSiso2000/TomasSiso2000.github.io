@@ -1,18 +1,19 @@
-/* Establecemos el fondo difuso */
+/* Establecemos el fondo difuso de la imagen de oficina de informática */
 body {
-    background-image: url('img/informatica-oficina.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover;
+    background-image: url('img/informatica-oficina.jpg'); /* Ruta correcta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center;
-    filter: blur(8px); /* Efecto difuminado */
+    filter: blur(8px); /* Efecto difuso */
     position: relative;
     height: 100vh;
     width: 100%;
+    margin: 0;
 }
 
 /* Contenido principal */
 .main {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,11 +25,12 @@ body {
 
 /* Imagen principal */
 #main_img-informatica {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    width: 150px; /* Hacemos la imagen más pequeña */
     height: auto;
-    border-radius: 50%;
+    border-radius: 50%; /* Forma circular */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 2; /* Asegura que la imagen esté por encima del fondo difuso */
+    z-index: 3; /* Asegura que esté encima del fondo difuso */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
 }
 
 /* Estilo del menú y otras secciones */
