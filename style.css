@@ -1,123 +1,629 @@
-/* Reseteo básico */
-* {
-    margin: 0;
-    padding: 0;
+style.css:
+*{
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
-/* Estructura del menú */
-#menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    z-index: 10;
+.wrapper{
+    width: 100vw;
+  height: 100vh;
+  background-color: rgb(5 180 224);
+  color: white;
 }
 
-.toggle-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
+.portfolio, .contact-section{
+    width:100vw;
+    
+    background-color: rgb(5 180 224);
+    color:white;
 }
 
-/* Estructura de la sección principal */
-.main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 70px;
-    padding: 2em;
+.menu a{
+    color:white;
+    text-decoration: none;
+    padding:10px 20px;
+    
 }
 
-#main_img-informatica {
-    max-width: 50%;
-    height: auto;
-    object-fit: cover;
+.menu .active{
+    color:brown;
 }
 
-.main-content {
-    max-width: 45%;
+.menu a:hover{
+    background-color: yellow;
+    color:rgb(5 180 224);
+    transition: ease-out .4s;
 }
 
-/* Estilo para el portafolio */
-.portfolio {
-    background-color: #f4f4f4;
-    padding: 2em;
-    text-align: center;
+.toggle-menu, .info-content .social-network{
+    display: none; 
 }
 
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
+.brand span{
+    color:magenta;
+
+}
+.menu{
+    display:flex;
+    width:50%;
     justify-content: space-around;
+    
 }
 
-.card {
-    width: 300px;
-    margin: 1em;
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+.menu li{
+    list-style: none;
+    
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.navbar{
+    display:flex;
+    justify-content: space-between ;
+    padding:2em;
 }
 
-/* Estilo para el formulario de contacto */
-.contact-section {
-    background-color: #1e1e1e;
-    color: white;
+.brand{
+    margin-top: -7px;
+}
+
+.main{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    
+   
+    
+}
+.info-content_p{
+	color: magneta;
+}
+
+h1{
+    font-size: clamp(4vw, 1.5em, 3em)
+}
+
+span{
+    color:magenta;
+}
+
+.download-cv, .project-details-button{
+    padding: 10px 20px;
+    background-color: magenta;
+    border:none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor:pointer;
+    box-shadow: 10px 3px 11px -5px rgb(0, 0, 0);
+}
+
+.download-cv:hover, .project-details-button:hover{
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.project-details-button a{
+    text-decoration: none;
+}
+
+.info-content{
+    z-index: 100;
+}
+
+.info-content_subtitle{
+    margin:100px;
+    margin-left:0px;
+}
+
+#main_img-yo{
+    margin-bottom: 100px;
+    position: relative;
+    width:550px;
+    border: 7px solid magenta;
+    height: 520px;
+}
+
+#main_img-informatica{
+    position:absolute;
+    top:80px;
+    height: 545px;
+    width: 100vw;
+    left:0px;
+    z-index: 0;
+    
+}
+
+#container{
+    position: absolute;
+    left:0px;
+    top:80px;
+    width: 100vw;
+    height: 545px;
+    
+    z-index: 0;
+    
+}
+
+.filter{  /* FILTRO DE IMAGEN EFECTO BORROSO */
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(5px);
+    background-color: rgba(243,243,243,0.2);
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    align-items: center;
+     
+}
+
+
+.about img{
+    grid-column: 1/5;
+    max-width: 100%;
+}
+
+.about-info{
+    grid-column: 5/10;
     padding: 3em;
 }
 
-.contact-form {
+.about-info h2{
+    font-size: 2em;
+    color: rgb(5 180 224);
+}
+
+.divider{
+    height: 4px;
+    width: 60px;
+    background-color: magenta;
+    margin-top: 5px;
+    margin-bottom: 2em;
+
+}
+
+.about p{
+    margin-bottom: 1em;
+}
+
+
+
+.portfolio-headings{
+    width:100vw;
+    padding: 5em;
+}
+
+.portfolio-headings h2{
+    font-size: 2.5em;
+}
+
+.portfolio .container{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.card{
+    width:300px;
+    height: 350px;
+    color:white;
+    background-color: black;
+    margin: 1em;
+    
+}
+
+.card:hover{
+    background-color: rgba(10, 10, 10, 0.658);
+}
+
+#card_title1{
+    margin-left: 20px;
+}
+
+#card_title2{
+    margin-left: 5px;
+}
+
+.card_img{
+    width: min(70%, 250px);
+    min-height: 210px;
+    min-width: 270px;
+    background-size: cover;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#card_img1{
+    background-image: url(https://cdn.pixabay.com/photo/2021/06/06/11/23/superman-logo-6315068__480.png);
+
+}
+
+#card_img2{
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ef02abe3-63cc-4dfa-8eab-5543cf3bcf4f/dd57j2a-5bc0d4f3-9c0f-480e-9943-eab7a6ba5203.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VmMDJhYmUzLTYzY2MtNGRmYS04ZWFiLTU1NDNjZjNiY2Y0ZlwvZGQ1N2oyYS01YmMwZDRmMy05YzBmLTQ4MGUtOTk0My1lYWI3YTZiYTUyMDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oiMoqjF5sUW6N649pm_WbxmpMUa3W2xE7f9CzvqMqao);
+
+}
+
+.card_project-icons{
+    margin-top: 320px;
+    margin-left: -100px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    margin-left: 8px;
+    
+
+}
+
+.card_icon-html{
+    color:orangered;
+    text-decoration: none;
+    
+
+}
+
+.card_icon-css{
+    color:#2962ff
+}
+
+.card_icon-js{
+    color: yellow;
+}
+
+.card_project-icons i{
+    font-size: 1.5em;
+}
+
+
+
+.card .project-details{
+    margin: 1em;
+    width: 70%;
+}
+
+.card .project-details a{
+    text-decoration: none;
+    color:black;
+    text-transform: uppercase;
+}
+
+.project-details-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.contact-section{
+    padding:3em;
+}
+
+.contact-headings h2{
+    font-size: 3em;
+    
+}
+
+.container-contact{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+   
+    
+}
+
+.contact-section img{
+    width: 500px;
+  height: 700px;
+  bottom: 0px;
+  opacity: 30%;
+    
+}
+
+.form-group{
     display: flex;
     flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+}
+
+.form_input{
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    
+}
+
+.form-group textarea{
+    height: 150px;
+    background: none;
+    padding:1.5em;
+    border: 1px solid white;
+}
+
+.btn-submit{
+    padding:10px 20px;
+    margin:1em;
+    border:none;
+    text-transform: uppercase;
+    background-color: magenta;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 10px 3px 11px -5px rgb(0, 0, 0);
+}
+
+.btn-submit:hover{
+    background-color: yellow;
+    box-shadow: none;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 200px;
+    background-color: magenta;
 }
 
-.form-group {
-    margin: 1em;
-    position: relative;
-    width: 100%;
+.footer-content h2{
+    font-size: 2em;
+
+}
+.footer-content h5, .social-network{
+    font-size: 1.5em;
+    
 }
 
-.form-group input {
-    padding: 0.5em;
-    width: 100%;
-    margin-top: 0.5em;
+.footer_social-network{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 1em;
+    font-size: 1.5em;
 }
 
-.formulario__input-error {
-    display: none;
-    color: red;
-    font-size: 0.8em;
-    position: absolute;
-    bottom: -20px;
+.formulario__validacion-estado {
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
 }
 
-.form-group-incorrecto .formulario__input-error {
+.formulario__input-error {  /*MENSAJE ERROR EN UN CAMPO (YA SEA EN EL DE NOMBRE O EN EL DE EMAIL)*/
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo{  /*ESTO VA A SER PARA QUE APAREZCA ALGO, EN NUESTRO CASO, SI TE FIJAS EN EL JS, HACE APARECER EL MENSAJE DE ERROR (O SEA, EL formulario__input-error) */
     display: block;
 }
 
-/* Estilo para las validaciones */
-.form-group-correcto input {
-    border-color: green;
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
 }
 
-.form-group-incorrecto input {
-    border-color: red;
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+
+/*---------------------- MEDIAQUERIES --------------------------------- */
+
+@media screen and (max-width:800px){
+    
+
+    .menu{
+        flex-direction:column;
+        justify-content:center;
+        position:absolute;
+        top:0;
+        left:0;
+        height:100vh;
+        background-color: rgb(43, 125, 180);
+        z-index:1;
+        transform: translateX(-110%);
+        transition:all .5s ease-in-out;
+    }
+    
+    .show-menu{
+        transform: translateX(0%);
+        transition:all .5s ease-in-out;
+        z-index: 300;
+
+    }
+    .menu li{
+        margin: 2em;
+    }
+
+    .toggle-menu{
+        display:block;
+        
+        
+    }
+
+    .fa-bars{
+        font-size: 1.5em;
+        margin-top: -.2em;
+        color:yellow;
+        
+    }
+
+    .toggle-menu .fa-close{
+        font-size: 1.7em;
+        display:none;
+        color:yellow;
+    }
+
+    .main, .about{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    #main_img-yo{
+         
+         width: min(70%, 350px);
+         height:auto;
+         min-height: 300px;
+         min-width: 250px;
+         z-index: 100;
+         
+    }
+
+    #main_img-informatica{
+        width: 100vw;
+        height: 544px;
+
+    }
+
+
+    #container{
+        width:100vw;
+        height: 544px;
+    }
+    .social-network{
+        display: flex;
+        justify-content: space-evenly;
+        width: 300px;
+        margin-top: 1em;
+    }
+
+    .info-content{
+        margin-bottom: -2vw;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
+
+
+    .info-content_subtitle{
+        
+        margin-bottom: -.7em;
+        margin-right: 0px;
+        
+    }
+
+    h1{
+        margin-bottom: -.5em;
+        margin-top: 22px;
+    }
+
+    
+    .info-content .social-network{
+        display:block;
+        display:flex;
+        justify-content:space-evenly;
+        
+    }
+
+    .download-cv, .info-content_p, .contact-section__img{
+        display:none;
+    }
+
+    .form-group{
+        width: 80vw;
+    }
+    
+    .about img{
+        display: none;
+    }
+
+    .about{
+        height: 500px;
+    }
+
+    .about-info{
+        margin-bottom: 100px;
+    }
+
+    .portfolio .container{
+        justify-content: center;
+    }
+
+    .card_img{
+        
+        width: 100%;
+        height: 100%;
+        max-width: 150px;
+        max-height:150px;
+        margin-left: 20px;
+        
+    }
+  
+
+}
+
+@media screen and (max-width:497px) {  /*TODAS ESTAS COSAS QUE ESTILICÉ ABAJO, EN EL CELULAR APARECIAN DESORDENADAS*/
+    
+    #main_img-yo{
+        top:-20vw;
+        width:350px;
+        height: 450px;
+    }
+
+    .info-content{
+        margin-bottom: 15vw;
+    }
+    
+    #main_img-informatica{
+        height: 756px;
+    }
+
+    #container{
+        height: 756px;
+    }
+
+    .card_project-icons{
+        margin-top:12vw;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+/*-------------- ESTADOS PARA VALIDADCION -------------------*/
+
+.form-group-incorrecto .form_input{
+    border: 3px solid red;
+    
+}
+
+.form-group-incorrecto .formulario__validacion-estado{
+    color:red;
+    opacity: 1;
+}
+
+.form-group-correcto .formulario__validacion-estado{
+    color: rgb(21, 179, 15);
+    opacity: 1;
 }
