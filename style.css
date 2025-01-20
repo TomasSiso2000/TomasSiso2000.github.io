@@ -1,103 +1,123 @@
+/* Reseteo básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-}
-
-.wrapper {
-    width: 100vw;
-    height: 100vh;
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
-.portfolio, .contact-section {
+/* Estructura del menú */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.menu {
+    background-color: #333;
     display: flex;
-    justify-content: center; /* Cambié esto para centrar el menú */
-    width: 50%;
-    list-style: none;
+    justify-content: space-between;
+    padding: 1em;
+    z-index: 10;
 }
 
-.menu a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: all 0.3s ease-in-out;
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
 }
 
-.menu .active {
-    color: #ff9800;
-}
-
-.menu a:hover {
-    background-color: #ff9800;
-    color: #121212;
-}
-
-.toggle-menu, .info-content .social-network {
-    display: none;
-}
-
-.brand span {
-    color: #ff9800;
-}
-
-.navbar {
+/* Estructura de la sección principal */
+.main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    margin-top: 70px;
+    padding: 2em;
 }
 
-.brand h2 {
-    font-size: 2em; /* Ajusté el tamaño de la fuente */
+#main_img-informatica {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80%;
-    height: 80vh;
-    margin: 0 auto;
-    align-items: center;
+.main-content {
+    max-width: 45%;
 }
 
-h1 {
-    font-size: clamp(4vw, 1.5em, 3em);
-    color: #ff9800;
+/* Estilo para el portafolio */
+.portfolio {
+    background-color: #f4f4f4;
+    padding: 2em;
+    text-align: center;
 }
 
-span {
-    color: #ff9800;
-}
-
-.download-cv, .project-details-button {
-    padding: 10px 20px;
-    background-color: #ff9800;
-    border: none;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    box-shadow: 0px 3px 11px -5px rgba(255, 152, 0, 0.7);
-    transition: all 0.3s ease-in-out;
-}
-
-.download-cv:hover, .project-details-button:hover {
-    background-color: #ff5722;
-    box-shadow: none;
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    width: 300px
+    width: 300px;
+    margin: 1em;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilo para el formulario de contacto */
+.contact-section {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 3em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin: 1em;
+    position: relative;
+    width: 100%;
+}
+
+.form-group input {
+    padding: 0.5em;
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+.formulario__input-error {
+    display: none;
+    color: red;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: -20px;
+}
+
+.form-group-incorrecto .formulario__input-error {
+    display: block;
+}
+
+/* Estilo para las validaciones */
+.form-group-correcto input {
+    border-color: green;
+}
+
+.form-group-incorrecto input {
+    border-color: red;
+}
