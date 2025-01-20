@@ -1,30 +1,33 @@
-/* Establecemos el fondo de la página */
-body {
+/* Reseteo de márgenes y padding para evitar inconsistencias entre navegadores */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: white; /* Color de fondo blanco para la página */
+    box-sizing: border-box;
 }
 
-/* Contenedor principal con fondo difuso solo para la imagen de oficina */
+/* Fondo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    overflow-x: hidden; /* Evitar desbordamientos horizontales */
+}
+
+/* Contenedor del fondo difuso */
 .background-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/informatica-oficina.jpg'); /* Ruta de la imagen de oficina */
-    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-image: url('img/informatica-oficina.jpg');
+    background-size: cover;
     background-position: center;
-    filter: blur(10px); /* Efecto difuso solo en el fondo */
-    z-index: -1; /* Coloca el fondo detrás del contenido */
+    filter: blur(10px);
+    z-index: -1;
 }
 
 /* Contenido principal */
 .main {
-    position: relative;
-    z-index: 1; /* Mantiene el contenido por encima del fondo */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,19 +35,30 @@ body {
     height: 100vh;
     color: white;
     text-align: center;
+    padding: 20px;
 }
 
-/* Imagen principal (yo.png) más pequeña */
+/* Imagen principal (más pequeña) */
 #main_img-informatica {
-    width: 150px; /* Tamaño de la imagen */
-    height: auto;
-    border-radius: 50%; /* Forma circular */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 2; /* Asegura que la imagen esté encima del fondo */
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    margin-bottom: 20px;
 }
 
-/* Estilo del menú y otras secciones */
+/* Estilo de los títulos y párrafos */
+h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Menú */
 .menu {
     position: fixed;
     top: 20px;
@@ -52,19 +66,105 @@ body {
     z-index: 10;
 }
 
-.portfolio {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+/* Botones del menú */
+.toggle-btn {
+    background: transparent;
+    border: none;
     color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 10px;
 }
 
-/* Formulario y otros elementos */
-.contact-form {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
+/* Portafolio */
+.portfolio {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
+    text-align: center;
+}
+
+.portfolio h2 {
+    margin-bottom: 40px;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Sección de contacto */
+.contact-section {
+    background-color: #333;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio h2 {
+        font-size: 1.5rem;
+    }
 }
